@@ -5,7 +5,6 @@ var secondsElement = document.getElementById('seconds')
 
 function countdownTimer() {
     const countdownDate = new Date('05/19/2024').getTime()
-    /*const countdownDate = new Date('12/29/2023 15:15').getTime()*/
 
     // Convert to milliseconds
     const second = 1000
@@ -47,4 +46,19 @@ function formatNumber(number) {
     return number
 }
 
-countdownTimer()
+// Toggle dropdown content when the button is clicked
+document.getElementById('dropdownButton').addEventListener('click', function() {
+    var dropdownContent = document.getElementById('dropdownContent');
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+});
+
+// Add event listener to the button to redirect to destinations page
+document.getElementById('destinationsBtn').addEventListener('click', function() {
+    window.location.href = 'destinations.html'; // Change 'destinations.html' to your actual destinations HTML file
+});
+
+countdownTimer();
