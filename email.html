@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="email.js" defer></script>
+  <link rel="stylesheet" href="style2.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "zMAxxiVVz9vt5wTkW",
+        });
+    })();
+
+    // Function to handle form submission
+    function handleSubmit(event) {
+      event.preventDefault(); // Prevent default form submission
+      sendMail(); // Call the sendMail function
+    }
+  </script>
+</head>
+<body>
+  <button id="indexBtn" class="top-left-btn">Countdown</button>
+  
+  <div class="container">
+    <h1>Missing Application</h1>
+
+    <form id="emailForm" onsubmit="handleSubmit(event)"> <!-- Call handleSubmit function on form submit -->
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message"></textarea><br>
+
+      <input type="submit" id="submitBtn"value="Submit">
+    </form>
+  </div>
+
+</body>
+
+<script>
+    document.getElementById('indexBtn').addEventListener('click', function() {
+      window.location.href = 'index.html'; // Redirects to index.html
+    });
+</script>

@@ -58,7 +58,12 @@ document.getElementById('dropdownButton').addEventListener('click', function() {
 
 // Add event listener to the button to redirect to destinations page
 document.getElementById('destinationsBtn').addEventListener('click', function() {
-    window.location.href = 'destinations.html'; // Change 'destinations.html' to your actual destinations HTML file
+    window.location.href = 'destinations.html'; 
 });
+
+document.getElementById('missingBtn').addEventListener('click', function() {
+    window.location.href = 'email.html'; 
+});
+
 
 countdownTimer();
