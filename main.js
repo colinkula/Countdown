@@ -27,7 +27,7 @@ function countdownTimer() {
 
         // When the date is reached
         if (dateDistance < 0) {
-            document.getElementById('headline').innerText = 'We are on the way!'
+            document.getElementById('headline').innerText = 'What a trip!'
             document.getElementById('countdown').style.display = 'none'
 
             // End interval

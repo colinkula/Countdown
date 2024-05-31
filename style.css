@@ -1,12 +1,11 @@
-*
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
 }
 
-body{
+body {
   width: 100%;
   min-height: 100vh;
   background-color: antiquewhite;
@@ -37,13 +36,12 @@ ul li {
   font-size: 1rem;
   text-transform: uppercase;
   text-align: center;
-
 }
 
 li span {
   display: block;
   font-size: 6rem;
-  color: sienna
+  color: sienna;
 }
 
 li.seperator {
@@ -169,17 +167,14 @@ li:first-of-type {
 
 .location-section .images {
   display: grid;
-  grid-auto-flow: column; /* Set the grid to flow items in columns */
-  grid-gap: 200px; /* Add some gap between the images */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
-  justify-content: center; /* Center the images horizontally */
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  grid-gap: 20px; /* Add some gap between the images */
   margin: 0 5%; /* Add margin to center the grid container and create equal spacing */
 }
 
 .location-section .images img {
   max-width: 100%; /* Ensure images don't exceed container width */
   height: auto; /* Maintain aspect ratio */
-
 }
 
 #summer2024 {
@@ -234,4 +229,3 @@ li:first-of-type {
   font-size: 18px; /* Adjust size as needed */
   margin-top: 0; /* Remove default margin */
 }
-
