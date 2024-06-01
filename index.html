@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Countdown</title>
+  <title>Home</title>
   <link rel="stylesheet" href="style.css">
   <script src="main.js" defer></script>
 </head>
@@ -13,20 +13,6 @@
     <button id="tripsBtn" class="top-left-btn">Trips</button>
     <button id="countdownBtn" class="top-left-btn">Countdown</button>
     <button id="contactBtn" class="top-left-btn">Contact</button>
-  </div>
-  
-  <div class="container1">
-    <h1 id="headline">lollapalooza 2!</h1>
-    <div id="countdown" class="countdown">
-      <ul>
-        <li><span id="days">00</span></li>
-        <li><span id="hours">00</span></li>
-        <li class="seperator">:</li>
-        <li><span id="minutes">00</span></li>
-        <li class="seperator">:</li>
-        <li><span id="seconds">00</span></li>
-      </ul>
-    </div>
   </div>
 
   <div class="social_links_text">
@@ -45,12 +31,13 @@
     document.getElementById('tripsBtn').addEventListener('click', function() {
         window.location.href = 'trips.html'; 
     });
-
+    document.getElementById('countdownBtn').addEventListener('click', function() {
+        window.location.href = 'countdown.html'; 
+    });  
     document.getElementById('contactBtn').addEventListener('click', function() {
         window.location.href = 'email.html'; 
     });  
   </script>
-
 
 </body>
 </html>
