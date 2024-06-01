@@ -1,0 +1,91 @@
+.location-section {
+    margin-bottom: 20px; /* Add space between each section */
+  }
+  
+  .location-section p {
+    text-align: center; /* Center align the descriptions */
+    margin-bottom: 0.5rem;
+  }
+  
+  .location-section h2 {
+    margin-top: 40px; /* Add margin above the "Summer 2023" section */
+    margin-bottom: .5rem;
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: sienna; /* Set the color to burnt sienna */
+    text-align: center;
+  }
+  
+  .location-section .images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-gap: 10px; /* Add some gap between the images */
+    margin: 0 5%; /* Add margin to center the grid container and create equal spacing */
+  }
+  
+  .location-section .images img {
+    width: 100%; /* Ensure images take up the entire width of the column */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images cover the fixed dimensions */
+    border: 5px solid #333; /* Add border around images */
+  }
+  
+  #summer2024 {
+    margin-top: 25px; /* Add margin above the "Summer 2023" section */
+  }
+  
+  #summer2024 h2 {
+    margin-top: 10px; /* Add margin above the "Summer 2023" section */
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: sienna;
+    text-align: center;
+  }
+  
+  #summer2023 {
+    margin-top: 100px; /* Add margin above the "Summer 2023" section */
+  }
+  
+  #summer2023 .grid-container {
+    display: grid;
+    justify-content: center; /* Center the grid items horizontally */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+    grid-gap: 10px; /* Add gap between images */
+    margin: 0 5%; /* Add margin to center the grid container and create equal spacing */
+  }
+  
+  #summer2023 .grid-container img {
+    width: 100%; /* Ensure images take up the entire width of the column */
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images cover the fixed dimensions */
+    border: 5px solid #333; /* Add border around images */
+  }
+  
+  #summer2023 h2 {
+    margin-bottom: 3rem;
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: sienna; /* Set the color to burnt sienna */
+    text-align: center;
+  }
+  
+  /* Style for temperature */
+  .location-section h1 {
+    text-align: center;
+    font-size: 18px; /* Adjust size as needed */
+    margin-bottom: 5px; /* Add some space between temperature and weather type */
+  }
+  
+  /* Style for weather type */
+  .location-section p {
+    font-size: 18px; /* Adjust size as needed */
+    margin-top: 0; /* Remove default margin */
+  }
+  

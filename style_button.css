@@ -1,0 +1,23 @@
+.top-left-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, auto); /* Adjust the number of columns as needed */
+    grid-gap: 10px; /* Adjust the spacing between buttons */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .top-left-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .top-left-btn:hover {
+    background-color: #555;
+  }
+  

@@ -1,16 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: antiquewhite;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container {
+.container {
     max-width: 600px; /* Limit maximum width */
     width: 100%;
     padding: 20px;
