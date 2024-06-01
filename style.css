@@ -147,7 +147,7 @@ li:first-of-type {
 }
 
 .location-section {
-  margin-bottom: 40px; /* Add space between each section */
+  margin-bottom: 20px; /* Add space between each section */
 }
 
 .location-section p {
@@ -156,6 +156,7 @@ li:first-of-type {
 }
 
 .location-section h2 {
+  margin-top: 40px; /* Add margin above the "Summer 2023" section */
   margin-bottom: .5rem;
   font-size: 2.5rem;
   font-weight: normal;
@@ -168,13 +169,15 @@ li:first-of-type {
 .location-section .images {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-  grid-gap: 20px; /* Add some gap between the images */
+  grid-gap: 10px; /* Add some gap between the images */
   margin: 0 5%; /* Add margin to center the grid container and create equal spacing */
 }
 
 .location-section .images img {
-  max-width: 100%; /* Ensure images don't exceed container width */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Ensure images take up the entire width of the column */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure images cover the fixed dimensions */
+  border: 5px solid #333; /* Add border around images */
 }
 
 #summer2024 {
@@ -182,6 +185,7 @@ li:first-of-type {
 }
 
 #summer2024 h2 {
+  margin-top: 10px; /* Add margin above the "Summer 2023" section */
   margin-bottom: 1rem;
   font-size: 3.5rem;
   font-weight: normal;
@@ -199,12 +203,15 @@ li:first-of-type {
   display: grid;
   justify-content: center; /* Center the grid items horizontally */
   grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
-  grid-gap: 20px; /* Add gap between images */
+  grid-gap: 10px; /* Add gap between images */
   margin: 0 5%; /* Add margin to center the grid container and create equal spacing */
 }
 
 #summer2023 .grid-container img {
   width: 100%; /* Ensure images take up the entire width of the column */
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure images cover the fixed dimensions */
+  border: 5px solid #333; /* Add border around images */
 }
 
 #summer2023 h2 {
