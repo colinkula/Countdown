@@ -10,17 +10,18 @@ ul {
     text-align: center;
   }
   
+  /* red - #fb5047 ; others - #34C3E3, #DCACE3, #04AB9B */
   li span {
     display: block;
     font-size: 6rem;
-    color: #34C3E3;
+    color: #4d72e2;
   }
   
   li.seperator {
     margin: 0 10px;
     font-size: 6rem;
     line-height: 1;
-    color: #DCACE3;
+    color: #4d72e2;
   }
   
   li:first-of-type {
@@ -28,13 +29,63 @@ ul {
   }
 
   .container1 {
+    margin-top: 20px;
     text-align: center; /* Ensure content is centered */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full height to center content vertically */
-    color: #04AB9B;
+    color: #4d72e2;
   }
-  
+
+.section {
+  padding: 20px;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  height: 250px; /* Full height to center content vertically */
+  width: 2500px; /* Make each section span the entire width of the screen */
+}
+
+#section1 {
+  background-color: #04AB9B; 
+}
+
+#section2 {
+  background-color: #DCACE3; 
+}
+
+#section3 {
+  background-color: #34C3E3; 
+}
+
+#section4 {
+  background-color: #8751c5; 
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-left-btn {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
   
