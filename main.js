@@ -4,66 +4,52 @@ var minutesElement = document.getElementById('minutes')
 var secondsElement = document.getElementById('seconds')
 
 function countdownTimer() {
-    const countdownDate = new Date('05/19/2024').getTime()
+    // Set the target date for July 31, 2024, at 10:00 PM Chicago time (CDT)
+    const targetDate = new Date(Date.UTC(2024, 6, 31, 22 - 5, 0, 0)); // 22 - 5 because CDT is UTC-5
 
     // Convert to milliseconds
-    const second = 1000
-    const minute = second * 60
-    const hour = minute * 60
-    const day = hour * 24
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    // Function to format the numbers with leading zeros if needed
+    function formatNumber(number) {
+        return number < 10 ? '0' + number : number;
+    }
 
     // Calculate each second
     const interval = setInterval(() => {
-        // Find current date
-        const currentDate = new Date().getTime()
+        // Find the current date in UTC
+        const currentDate = new Date().getTime();
 
-        // Find difference between the two dates
-        const dateDistance = countdownDate - currentDate
+        // Find the difference between the two dates
+        const dateDistance = targetDate - currentDate;
 
-        daysElement.innerText = formatNumber(Math.floor(dateDistance / day))
-        hoursElement.innerText = formatNumber(Math.floor((dateDistance % day) / hour))
-        minutesElement.innerText = formatNumber(Math.floor((dateDistance % hour) / minute))
-        secondsElement.innerText = formatNumber(Math.floor((dateDistance % minute) / second))
+        // Calculate and display the time remaining
+        document.getElementById('days').innerText = formatNumber(Math.floor(dateDistance / day));
+        document.getElementById('hours').innerText = formatNumber(Math.floor((dateDistance % day) / hour));
+        document.getElementById('minutes').innerText = formatNumber(Math.floor((dateDistance % hour) / minute));
+        document.getElementById('seconds').innerText = formatNumber(Math.floor((dateDistance % minute) / second));
 
         // When the date is reached
         if (dateDistance < 0) {
-            document.getElementById('headline').innerText = 'What a trip!'
-            document.getElementById('countdown').style.display = 'none'
+            document.getElementById('headline').innerText = 'What a trip!';
+            document.getElementById('countdown').style.display = 'none';
 
             // End interval
-            clearInterval(interval)
+            clearInterval(interval);
         }
     }, 1000);
-
 }
-
-// If number is only one digit, add a zero to the front
-function formatNumber(number) { 
-    if (number < 10) {
-        return '0' + number
-    }
-
-    return number
-}
-
-// Toggle dropdown content when the button is clicked
-document.getElementById('dropdownButton').addEventListener('click', function() {
-    var dropdownContent = document.getElementById('dropdownContent');
-    if (dropdownContent.style.display === 'block') {
-        dropdownContent.style.display = 'none';
-    } else {
-        dropdownContent.style.display = 'block';
-    }
-});
-
-// Add event listener to the button to redirect to destinations page
-document.getElementById('destinationsBtn').addEventListener('click', function() {
-    window.location.href = 'destinations.html'; 
-});
-
-document.getElementById('missingBtn').addEventListener('click', function() {
-    window.location.href = 'email.html'; 
-});
-
 
 countdownTimer();
+
+// Add event listener to the button to redirect to destinations page
+document.getElementById('tripsBtn').addEventListener('click', function() {
+    window.location.href = 'trips.html'; 
+});
+
+document.getElementById('contactBtn').addEventListener('click', function() {
+    window.location.href = 'email.html'; 
+});

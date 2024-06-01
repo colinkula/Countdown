@@ -18,6 +18,16 @@ body {
   align-items: center;
 }
 
+.container1 {
+  text-align: center; /* Ensure content is centered */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height to center content vertically */
+  color: #04AB9B;
+}
+
 h1 {
   margin-bottom: 4rem;
   font-size: 2.5rem;
@@ -41,14 +51,14 @@ ul li {
 li span {
   display: block;
   font-size: 6rem;
-  color: sienna;
+  color: #34C3E3;
 }
 
 li.seperator {
   margin: 0 10px;
   font-size: 6rem;
   line-height: 1;
-  color: sienna;
+  color: #DCACE3;
 }
 
 li:first-of-type {
@@ -80,70 +90,27 @@ li:first-of-type {
   gap: 1.5rem;
 }
 
-.dropdown-btn {
+.top-left-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, auto); /* Adjust the number of columns as needed */
+  grid-gap: 10px; /* Adjust the spacing between buttons */
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: antiquewhite;
-  color: black;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 40px;
-  right: 10px;
-  background-color: antiquewhite;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-  white-space: normal; /* Allow text to wrap */
-  word-wrap: break-word; /* Ensure long words wrap */
-}
-
-.dropdown-content p {
-  margin: 0;
-}
-
-.dropdown-btn:hover .dropdown-content {
-  display: block;
+  top: 20px;
+  left: 20px;
 }
 
 .top-left-btn {
-  position: absolute; /* Position the button relative to the document */
-  top: 20px; /* Adjust as needed */
-  left: 20px; /* Adjust as needed */
-  padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #333; /* Background color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor style on hover */
-  font-size: 16px; /* Font size */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .top-left-btn:hover {
-  background-color: #555; /* Darker background color on hover */
-}
-
-.top-left-btn2 {
-  position: absolute; /* Position the button relative to the document */
-  top: 20px; /* Adjust as needed */
-  left: 150px; /* Adjust as needed */
-  padding: 10px 20px; /* Adjust padding as needed */
-  background-color: #333; /* Background color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Cursor style on hover */
-  font-size: 16px; /* Font size */
-}
-
-.top-left-btn2:hover {
-  background-color: #555; /* Darker background color on hover */
+  background-color: #555;
 }
 
 .location-section {
