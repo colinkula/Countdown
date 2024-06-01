@@ -44,12 +44,3 @@ function countdownTimer() {
 }
 
 countdownTimer();
-
-// Add event listener to the button to redirect to destinations page
-document.getElementById('tripsBtn').addEventListener('click', function() {
-    window.location.href = 'trips.html'; 
-});
-
-document.getElementById('contactBtn').addEventListener('click', function() {
-    window.location.href = 'email.html'; 
-});
