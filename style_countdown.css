@@ -1,51 +1,57 @@
 ul {
-    display: flex;
-    justify-content: center;
-  }
-  
-  ul li {
-    list-style-type: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  /* red - #fb5047 ; others - #34C3E3, #DCACE3, #04AB9B */
-  li span {
-    display: block;
-    font-size: 6rem;
-    color: #4d72e2;
-  }
-  
-  li.seperator {
-    margin: 0 10px;
-    font-size: 6rem;
-    line-height: 1;
-    color: #4d72e2;
-  }
-  
-  li:first-of-type {
-    margin-right: 5rem;
-  }
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
 
-  .container1 {
-    margin-top: 20px;
-    text-align: center; /* Ensure content is centered */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full height to center content vertically */
-    color: #4d72e2;
-  }
+ul li {
+  list-style-type: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+li span {
+  display: block;
+  font-size: 5rem;
+  color: #333;
+}
+
+.separator {
+  font-size: 5rem;
+  line-height: 1;
+  color: #333;
+}
+
+.container1 {
+  margin-top: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* Added spacing between days and hours, minutes, and seconds */
+#days {
+  margin-right: 40px; /* Increase this value for more space */
+}
+
+#hours, #minutes, #seconds {
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 .section {
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   color: #333;
   font-size: 20px;
   text-align: center;
-  height: 250px; /* Full height to center content vertically */
-  width: 2500px; /* Make each section span the entire width of the screen */
+  height: 400px;
+  width: 150%;
 }
 
 #section1 {
@@ -88,4 +94,24 @@ body {
   font-size: 16px;
 }
 
-  
+.writings-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.writing-item {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.artist, .rating {
+  font-size: 1.2rem;
+  color: #333;
+}
