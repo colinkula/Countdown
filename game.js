@@ -35,14 +35,14 @@ document.addEventListener('keydown', () => {
     }
 });
 
-canvas.addEventListener('touchstart', () => {
+canvas.addEventListener('touchstart', (event) => {
+    event.preventDefault(); // Prevent default behavior (like zooming)
     if (gameRunning) {
         birdVelocity = -FLAP;
     } else {
         resetGame();
     }
 });
-
 
 // Game loop
 function gameLoop(currentTime) {
