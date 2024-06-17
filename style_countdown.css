@@ -52,6 +52,7 @@ li span {
   text-align: center;
   height: 400px;
   width: 150%;
+  border-radius: 15px; 
 }
 
 #section1 {
