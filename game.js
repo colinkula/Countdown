@@ -1,6 +1,10 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
+// Set canvas size
+//canvas.width = window.innerWidth;
+//canvas.height = window.innerHeight;
+
 // Game constants
 const GRAVITY = 0.5;
 const FLAP = 7;
@@ -30,6 +34,15 @@ document.addEventListener('keydown', () => {
         resetGame();
     }
 });
+
+canvas.addEventListener('touchstart', () => {
+    if (gameRunning) {
+        birdVelocity = -FLAP;
+    } else {
+        resetGame();
+    }
+});
+
 
 // Game loop
 function gameLoop(currentTime) {
