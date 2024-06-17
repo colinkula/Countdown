@@ -2,8 +2,8 @@ const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
 // Game constants
-const GRAVITY = 0.25;
-const FLAP = 4.6;
+const GRAVITY = 0.5;
+const FLAP = 7;
 const PIPE_WIDTH = 50;
 const PIPE_SPACING = 75;
 const PIPE_GAP = 100;
