@@ -5,7 +5,7 @@ const ctx = canvas.getContext('2d');
 const GRAVITY = 0.25;
 const FLAP = 4.6;
 const PIPE_WIDTH = 50;
-const PIPE_SPACING = 100;
+const PIPE_SPACING = 75;
 const PIPE_GAP = 100;
 const BIRD_WIDTH = 20;
 const BIRD_HEIGHT = 20;
@@ -19,6 +19,7 @@ let pipes = [];
 let frameCount = 0;
 let gameRunning = true;
 let score = 0;
+let highScore = 0;
 let lastTime = 0;
 
 // Handle keypress to flap
@@ -56,7 +57,7 @@ function gameLoop(currentTime) {
 
         // Update and draw pipes
         pipes.forEach((pipe, index) => {
-            pipe.x -= 2;
+            pipe.x -= 4;
             ctx.fillStyle = 'green';
             ctx.fillRect(pipe.x, 0, PIPE_WIDTH, pipe.y);
             ctx.fillRect(pipe.x, pipe.y + PIPE_GAP, PIPE_WIDTH, canvas.height - pipe.y - PIPE_GAP);
@@ -83,6 +84,7 @@ function gameLoop(currentTime) {
         ctx.fillStyle = '#000';
         ctx.font = '24px Arial';
         ctx.fillText('Score: ' + score, 10, 30);
+        ctx.fillText('High Score: ' + highScore, 150, 30);
 
         frameCount++;
     }
@@ -97,6 +99,12 @@ function resetGame() {
     pipes = [];
     frameCount = 0;
     gameRunning = true;
+
+    if (score > highScore) {
+        highScore = score;
+    }
+    score = 0;
+
     gameLoop();
 }
 
