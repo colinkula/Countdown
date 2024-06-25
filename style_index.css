@@ -23,3 +23,11 @@
     gap: 1.5rem;
   }
   
+  .homepage-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 90px; /* Adjust the top margin as needed */
+    color: sienna;
+  }
